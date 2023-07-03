@@ -28,17 +28,17 @@ const Home = () => {
     setIndex(randomNumber);
   };
   const { text, author } = quotes[index];
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    `${text}, "${author}"`
+  )}`;
+
   return (
     <div id="quote-box">
       <p id="text">{text}</p>
       <h4 id="author">" {author} "</h4>
       <div className="buttons">
         <button>
-          <a
-            id="tweet-quote"
-            href="https://twitter.com/intent/tweet"
-            target="_blank"
-          >
+          <a id="tweet-quote" href={tweetUrl} target="_blank">
             <FaTwitter />
           </a>
         </button>
