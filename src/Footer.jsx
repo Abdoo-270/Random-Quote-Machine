@@ -5,11 +5,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <p className="text-center">
-          &copy; {currentYear} Abdelrahman Mohammed. All rights reserved.
-        </p>
-      </div>
+      <p className="copyright">
+        &copy; {currentYear} Abdelrahman Mohammed. All rights reserved.
+      </p>
     </footer>
   );
 };
